@@ -1,1 +1,5 @@
 docker run -d --name=postgres -v /home/vasa/data/:/data/pg postgres
+docker rm -f postgres
+ls home/vasa/data
+mv home/vasa/data home/vasa1/data
+docker run -d --name=postgres -v /home/vasa1/data/:/data/pg postgres
